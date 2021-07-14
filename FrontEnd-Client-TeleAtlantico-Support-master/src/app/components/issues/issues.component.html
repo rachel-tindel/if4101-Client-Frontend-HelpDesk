@@ -9,9 +9,8 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Fecha</th>
             <th>#Reporte</th>
+            <th>Fecha</th>
             <th>Estado</th>
             <th>Servicio</th>
             <th>Acciones</th>
@@ -21,7 +20,6 @@
           <tr *ngFor="let issue of issues">
             <td>{{ issue.id }}</td>
             <th>{{ issue.creationdate | date }}</th>
-            <td>{{ issue.reportnumber }}</td>
             <td>{{ issue.status }}</td>
             <td> {{ issue.service }}</td>
             <td class="text-center">

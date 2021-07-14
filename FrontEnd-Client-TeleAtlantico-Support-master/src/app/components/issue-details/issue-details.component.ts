@@ -42,7 +42,7 @@ export class IssueDetailsComponent implements OnInit {
     this.issueService.getIssueById(this.issueid)
     .subscribe( issue => {
       this.issue = issue;
-      this.loadComments(this.issue.reportnumber);
+      this.loadComments(this.issue.id);
     });
   }
 
@@ -57,12 +57,12 @@ export class IssueDetailsComponent implements OnInit {
     if(this.commentForm.invalid){
       return;
     }
-    this.commentForm.get('reportnumber').setValue(this.issue.reportnumber);
+    this.commentForm.get('reportnumber').setValue(this.issue.id);
     this.commentForm.get('creationuser').setValue(this.clientService.client.name);
 
     this.commentService.addComment(this.commentForm.value)
     .subscribe( resp =>{
-      this.loadComments(this.issue.reportnumber);
+      this.loadComments(this.issue.id);
       this.commentForm.get('description').setValue('');
     });
   }
