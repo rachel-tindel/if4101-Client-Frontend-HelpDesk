@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-5">
+  <div *ngIf="!issues" class="loader">Loading...</div>
+
+  <div *ngIf="issues" class="response-table card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">Historial de Solicitudes</h4>
+      <hr>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>#Reporte</th>
+            <th>Estado</th>
+            <th>Servicio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let issue of issues">
+            <td>{{ issue.id }}</td>
+            <th>{{ issue.creationdate | date }}</th>
+            <td>{{ issue.reportnumber }}</td>
+            <td>{{ issue.status }}</td>
+            <td> {{ issue.service }}</td>
+            <td class="text-center">
+              <a class="btn btn-outline-info" (click)="issueDetail(issue.id)"> <i class="fa fa-folder"></i> </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+</div>

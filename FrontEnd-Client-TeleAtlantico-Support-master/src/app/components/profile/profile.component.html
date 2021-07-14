@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center mt-5">
+      <table class="table table-striped response-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Dirección</th>
+            <th>Teléfono #1</th>
+            <th>Teléfono #2</th>
+            <th>Correo</th>
+            <th>Servicios</th>
+            <th>Fecha de Afiliación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{client.id}}</th>
+            <td>{{client.name}}</td>
+            <td>{{client.firstsurname}}</td>
+            <td>{{client.secondsurname}}</td>
+            <th>{{client.address}}</th>
+            <td>{{client.phone}}</td>
+            <td>{{client.secondcontact}}</td>
+            <td>{{client.email}}</td>
+            <td>
+              <h6 *ngIf="client.telephone == 1"> Telefonía fija, </h6>
+              <h6 *ngIf="client.internet == 1"> Internet, </h6>
+              <h6 *ngIf="client.mobilephone == 1"> Telefonía móvil, </h6>
+              <h6 *ngIf="client.television == 1"> Cable </h6>
+            </td>
+            <td>{{client.creationdate | date }}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

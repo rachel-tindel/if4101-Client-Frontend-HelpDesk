@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #C3EDE9;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="" routerLink="/home">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="" routerLink="/create-issue">Crear solicitud</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="" routerLink="/issues">Historial de solicitudes</a>
+        </li>
+
+        <li class="nav-item mr-5">
+          <a class="nav-link mr-5" href="" routerLink="/profile">Perfil</a>
+        </li>
+
+        <li class="nav-item mr-5">
+          <a class="nav-link ml-5 mr-5"></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link ml-5 mr-5"></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link ml-4 mr-4"></a>
+        </li>
+        <li class="nav-item ml-2 mr-2">
+          <p> {{ client.name | uppercase }} {{ client.firstsurname | uppercase }} {{ client.secondsurname | uppercase }}
+          </p>
+        </li>
+        <li class="nav-item ml-5">
+          <a class="ml-5 nav-link" href="" (click)="logout()">Salir</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
