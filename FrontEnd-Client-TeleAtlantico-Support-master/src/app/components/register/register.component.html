@@ -1,6 +1,6 @@
-<article class="mb-3" style="background-color: #C3EDE9;">
+<article class="mb-3" style="background-color: #17a2b8;">
   <div class="card-body text-center">
-    <h3 class="text-white mt-3 blk"> Crear Cuenta </h3>
+    <h3 class="text-white mt-3 blk"> </h3>
   </div>
   <br><br>
 </article>
@@ -8,72 +8,97 @@
 <div class="container">
   <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center"></h4>
+      <h2 class="card-title mt-3 text-center">Registrarse</h2>
       <hr>
       <form autocomplete="off" [formGroup]="registerForm" (ngSubmit)="createUser()">
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <input id="name" class="form-control" formControlName="name" name=""
-            placeholder="Nombre *" type="text">
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <input formControlName="firstsurname" id="firstsurname" name=""
-            class="form-control" placeholder="Primer Apellido *" type="text">
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <input formControlName="secondsurname" id="secondsurname"  name=""
-            class="form-control" placeholder="Segundo Apellido *" type="text">
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-address-book"></i> </span>
-          </div>
-          <input formControlName="address" id="address" name="" class="form-control"
-            placeholder="Dirección Exacta *" type="text">
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-          </div>
-          <input formControlName="email" id="email" name="" class="form-control"
-            placeholder="Correo Electrónico *" type="email">
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-          </div>
-          <select class="custom-select" style="max-width: 120px;">
-            <option value="1">+506</option>
-          </select>
-          <input formControlName="phone" id="phone" name="" class="form-control"
-            placeholder="Contacto Principal *" type="number" min="0" required>
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-          </div>
-          <select class="custom-select" style="max-width: 120px;">
-            <option value="1">+506</option>
-          </select>
-          <input formControlName="secondcontact" id="secondcontact"  name=""
-            class="form-control" placeholder="Segundo Contacto " type="number" min="0" required>
-        </div>
 
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-          </div>
-          <input formControlName="password" id="password" class="form-control"
-            placeholder="Crear Contraseña *" type="password">
-        </div>
+        <table>
+
+
+        </table>
+
+        <table style="width:220px;">
+        
+            <th>
+              <tr style="width:200px">
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input id="name" class="form-control" formControlName="name" name=""
+                    placeholder="Nombre *" type="text">
+                </div> <br>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input formControlName="firstsurname" id="firstsurname" name=""
+                    class="form-control" placeholder="Primer Apellido *" type="text">
+                </div> <br>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input formControlName="secondsurname" id="secondsurname"  name=""
+                    class="form-control" placeholder="Segundo Apellido *" type="text">
+                </div> <br>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-address-book"></i> </span>
+                  </div>
+                  <input formControlName="address" id="address" name="" class="form-control"
+                    placeholder="Dirección Exacta *" type="text">
+                </div> <br>
+              </tr>
+            </th>
+            <th>
+              <tr style="width:200px;">
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                  </div>
+                  <input formControlName="email" id="email" name="" class="form-control"
+                    placeholder="Correo Electrónico *" type="email">
+                </div> <br>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                  </div>
+                  <select class="custom-select" style="max-width: 120px;">
+                    <option value="1">+506</option>
+                  </select>
+                  <input formControlName="phone" id="phone" name="" class="form-control"
+                    placeholder="Contacto Principal *" type="number" min="0" required>
+                </div> <br>
+
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                  </div>
+                  <select class="custom-select" style="max-width: 120px;">
+                    <option value="1">+506</option>
+                  </select>
+                  <input formControlName="secondcontact" id="secondcontact"  name=""
+                    class="form-control" placeholder="Segundo Contacto " type="number" min="0" required>
+                </div> <br>
+        
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                  </div>
+                  <input formControlName="password" id="password" class="form-control"
+                    placeholder="Crear Contraseña *" type="password">
+                </div> <br>
+              </tr>
+            </th>
+         
+        </table>
 
         <div class="form-group input-group">
           <label for="">Seleccione sus servicios:</label>
@@ -112,8 +137,6 @@
             Seleccione al menos un servicio
           </div>
         </div>
-
-
         <hr>
         <div class="form-group">
           <button type="submit" class="btn btn-info btn-block"> Crear Cuenta </button>
