@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../models/client.model';
 
+import { MaterialModule } from '../../material/material.module';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
 
   newClient:Client=new Client();
@@ -44,9 +47,9 @@ export class RegisterComponent implements OnInit {
 
   createUser(){
 
-    if(!this.serviceValid){
+    /*if(!this.serviceValid){
       return;
-    }
+    }*/
 
     if(this.registerForm.invalid){
       return;
@@ -80,7 +83,7 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get(value).invalid && this.registerForm.get(value).touched
   }
 
-  get serviceValid() {
+  /*get serviceValid() {
 
     if(this.registerForm.get('television').value){
       return true;
@@ -95,7 +98,7 @@ export class RegisterComponent implements OnInit {
       return true;
     }
     return false;
-  }
+  }*/
 
   modal( url:string | '', message:String){
     let timerInterval
