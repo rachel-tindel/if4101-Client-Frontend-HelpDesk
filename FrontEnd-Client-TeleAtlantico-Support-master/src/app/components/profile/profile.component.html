@@ -1,42 +1,77 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
-  <div class="row">
-    <div class="col-12 text-center mt-5">
-      <table class="table table-striped response-table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Primer Apellido</th>
-            <th>Segundo Apellido</th>
-            <th>Dirección</th>
-            <th>Teléfono #1</th>
-            <th>Teléfono #2</th>
-            <th>Correo</th>
-            <th>Servicios</th>
-            <th>Fecha de Afiliación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{client.name}}</td>
-            <td>{{client.firstsurname}}</td>
-            <td>{{client.secondsurname}}</td>
-            <th>{{client.address}}</th>
-            <td>{{client.phone}}</td>
-            <td>{{client.secondcontact}}</td>
-            <td>{{client.email}}</td>
-            <td>
-              <h6 *ngIf="client.telephone == 1"> Telefonía fija, </h6>
-              <h6 *ngIf="client.internet == 1"> Internet, </h6>
-              <h6 *ngIf="client.mobilephone == 1"> Telefonía móvil, </h6>
-              <h6 *ngIf="client.television == 1"> Cable </h6>
-            </td>
-            <td>{{client.creationdate | date }}</td>
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <div class="response-table">
+                <h2>Your profile</h2>
 
-          </tr>
-        </tbody>
-      </table>
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Nombre:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="name">{{client.name}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Primer apellido:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="first_surname">{{client.firstsurname}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Segundo apellido:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="second_surname">{{client.secondsurname}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Dirección:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="address">{{client.address}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Número de teléfono nº1:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="phone">{{client.phone}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Número de teléfono nº2:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="secondcontact">{{client.secondcontact}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Correo electrónico:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="email">{{client.email}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Servicios:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="services">
+                          <h6 *ngIf="client.telephone == 1"> Telefonía fija </h6>
+                          <h6 *ngIf="client.internet == 1"> Internet </h6>
+                          <h6 *ngIf="client.mobilephone == 1"> Telefonía móvil </h6>
+                          <h6 *ngIf="client.television == 1"> Cable </h6></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-12">Fecha de Afiliación:</label>
+                    <div class="col-md-4">
+                        <span class="form-control" name="creation_date">{{client.creationdate | date }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
-
-</div>
