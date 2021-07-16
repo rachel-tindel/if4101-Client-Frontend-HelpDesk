@@ -13,6 +13,8 @@ import { IssuesComponent } from './components/issues/issues.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { IssueDetailsComponent } from './components/issue-details/issue-details.component';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,16 @@ import { IssueDetailsComponent } from './components/issue-details/issue-details.
     HomeComponent,
     IssuesComponent,
     ProfileComponent,
-    IssueDetailsComponent
+    IssueDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
