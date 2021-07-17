@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../models/client.model';
 import { UpperCasePipe } from '@angular/common';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
@@ -41,21 +42,22 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-  this.clientService.login(this.loginForm.value)
+    this.clientService.login(this.loginForm.value)
     .subscribe( client =>{
        if(client)   {
         this.client = client;
-        this.modal('/home','Bienvenido: '+ (this.client.name).toUpperCase() +' '+(this.client.firstsurname).toUpperCase());
+        this.modal('/home','Help-Desk TeleAtlántico');
        }else{
         this.modal('','Error al autentificar')
        }
     });
   }
 
-  modal( url:string | '', message:String){
+  modal( url:string | '', cargando:String){
     let timerInterval
         Swal.fire({
-        title: message,
+        title: cargando,
+        background: '#8cfffb',
         html: '',
         timer: 1000,
         didOpen: () => {
@@ -67,6 +69,7 @@ export class LoginComponent implements OnInit {
         clearInterval(timerInterval)
         }
         }).then((result) => {
+          
           if (result.dismiss === Swal.DismissReason.timer) {
             this.router.navigateByUrl(url);
           }
