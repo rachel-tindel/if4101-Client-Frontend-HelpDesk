@@ -1,101 +1,102 @@
 <app-nav-bar></app-nav-bar>
-<div class="container" >
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-            <div class="response-table">      
-                 <h2>Your profile</h2>
-                 <div style="text-align:center;">
-                <table style="margin: 0 auto;">
-                
-                        <tr>
-                            <td>
-                                    <label class="control-label col-md-12">Nombre:</label>   
-                            </td>
-                            <td>   
-                                        <span class="form-control" name="name">{{client.name}}</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>     
-                                    <label class="control-label col-md-12">Primer apellido:</label>       
-                            </td>
-                
-                            <td>
-                                <span class="form-control" name="first_surname">{{client.firstsurname}}</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>     
-                                <label class="control-label col-md-12">Segundo apellido:</label>
-                            </td>
-                
-                            <td>
-                                <span class="form-control" name="second_surname">{{client.secondsurname}}</span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>     
-                                    <label class="control-label col-md-12">Dirección:</label>   
-                            </td>
-                
-                            <td>
-                                <span class="form-control" name="address">{{client.address}}</span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>
-                                <label class="control-label col-md-12">Número de teléfono nº1:</label>          
-                            </td>
-                            <td>
-                                <span class="form-control" name="phone">{{client.phone}}</span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>
-                                <label class="control-label col-md-12">Número de teléfono nº2:</label>     
-                            </td>
-                            <td>
-                                <span class="form-control" name="secondcontact">{{client.secondcontact}}</span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>
-                                <label class="control-label col-md-12">Correo electrónico:</label>
-                            </td>
-                            <td>
-                                <span class="form-control" name="email">{{client.email}}</span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>
-                                <label class="control-label col-md-12">Servicios:</label>
-                            </td>
-                            <td>
-                                <span class="form-control" name="services">
-                                    <h6 *ngIf="client.telephone == 1"> Telefonía fija </h6>
-                                    <h6 *ngIf="client.internet == 1"> Internet </h6>
-                                    <h6 *ngIf="client.mobilephone == 1"> Telefonía móvil </h6>
-                                    <h6 *ngIf="client.television == 1"> Cable </h6></span>
-                            </td>
-                        </tr>
-                
-                        <tr>
-                            <td>
-                                <label class="control-label col-md-12">Fecha de Afiliación:</label>
-                            </td>
-                            <td>
-                                <span class="form-control" name="creation_date">{{client.creationdate | date }}</span>
-                            </td>
-                        </tr>
-                    </table>
-                
-                </div>
-            </div>
-        </div>
+<div class="container mt-5">
+    <div class="card bg-light">
+        <article class="card-body mx-auto">
+            <h4 class="card-title mt-3 text-center">
+                Perfil
+            </h4>
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="far fa-id-card"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="name" type="text" readonly />
+                        </div>
+                    </td>
 
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="address" type="text" readonly />
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="contactphone" type="number" readonly />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="contactphoneSecond" type="number" readonly />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="contactemail" type="email" readonly/>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="contactemail" type="email" readonly/>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" formControlName="contactemail" type="email" readonly/>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </article>
     </div>
+</div>

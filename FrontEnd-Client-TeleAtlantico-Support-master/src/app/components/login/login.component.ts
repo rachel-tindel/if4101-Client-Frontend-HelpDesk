@@ -14,27 +14,27 @@ import { style } from '@angular/animations';
 })
 export class LoginComponent implements OnInit {
 
-  client:Client = new Client();
+  client: Client = new Client();
 
   public loginForm = this.fb.group({
-    email : ['',[ Validators.required, Validators.email]],
-    password : ['',[ Validators.required, Validators.minLength(8)]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
   });
 
-  constructor(  private fb:FormBuilder,
-                private router:Router,
-                private clientService:ClientService) { }
+  constructor(private fb: FormBuilder,
+    private router: Router,
+    private clientService: ClientService) { }
 
   ngOnInit(): void {
   }
 
-  valueNoValid(value:string) {
+  valueNoValid(value: string) {
     return this.loginForm.get(value).invalid && this.loginForm.get(value).touched
   }
 
-  loginUser(){
+  loginUser() {
 
-     if(this.loginForm.invalid){
+    if (this.loginForm.invalid) {
       let email = document.getElementById("email");
       let password = document.getElementById("password");
       email.classList.add("is-invalid");
@@ -43,37 +43,37 @@ export class LoginComponent implements OnInit {
     }
 
     this.clientService.login(this.loginForm.value)
-    .subscribe( client =>{
-       if(client)   {
-        this.client = client;
-        this.modal('/home','Help-Desk TeleAtlántico');
-       }else{
-        this.modal('','Error al autentificar')
-       }
-    });
+      .subscribe(client => {
+        if (client) {
+          this.client = client;
+          this.modal('/home', 'Help-Desk TeleAtlántico');
+        } else {
+          this.modal('', 'Error al autentificar')
+        }
+      });
   }
 
-  modal( url:string | '', cargando:String){
+  modal(url: string | '', cargando: String) {
     let timerInterval
-        Swal.fire({
-        title: cargando,
-        background: '#8cfffb',
-        html: '',
-        timer: 1000,
-        didOpen: () => {
-          Swal.showLoading()
-          timerInterval = setInterval(() => {
-          }, 50)
-        },
-        willClose: () => {
+    Swal.fire({
+      title: cargando,
+      background: '#8cfffb',
+      html: '',
+      timer: 1000,
+      didOpen: () => {
+        Swal.showLoading()
+        timerInterval = setInterval(() => {
+        }, 50)
+      },
+      willClose: () => {
         clearInterval(timerInterval)
-        }
-        }).then((result) => {
-          
-          if (result.dismiss === Swal.DismissReason.timer) {
-            this.router.navigateByUrl(url);
-          }
-        })
+      }
+    }).then((result) => {
+
+      if (result.dismiss === Swal.DismissReason.timer) {
+        this.router.navigateByUrl(url);
+      }
+    })
   }
 
 }

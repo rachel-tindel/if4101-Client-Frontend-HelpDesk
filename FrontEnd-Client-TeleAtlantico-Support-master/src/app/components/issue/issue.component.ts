@@ -59,7 +59,12 @@ export class IssueComponent implements OnInit {
     this.issueService.addIssue(this.issueForm.value)
     .subscribe( resp =>{
      
-        this.modal('','Registro Exitoso');
+        Swal.fire({
+          icon: 'success',
+          title: 'Solicitud enviada con éxito',
+          showConfirmButton: false,
+          timer: 1500
+        })
         this.issueForm.get('description').setValue('');
         this.issueForm.get('service').setValue(0);
         this.issueForm.get('reportnumber').setValue(this.newReportNumber());
