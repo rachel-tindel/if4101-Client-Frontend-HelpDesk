@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontEnd-Client-TeleAtlantico-Support": {
+    "if4101-Client-Frontend-HelpDesk": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FrontEnd-Client-TeleAtlantico-Support",
+            "outputPath": "dist/if4101-Client-Frontend-HelpDesk",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FrontEnd-Client-TeleAtlantico-Support:build"
+            "browserTarget": "if4101-Client-Frontend-HelpDesk:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FrontEnd-Client-TeleAtlantico-Support:build:production"
+              "browserTarget": "if4101-Client-Frontend-HelpDesk:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontEnd-Client-TeleAtlantico-Support:build"
+            "browserTarget": "if4101-Client-Frontend-HelpDesk:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FrontEnd-Client-TeleAtlantico-Support:serve"
+            "devServerTarget": "if4101-Client-Frontend-HelpDesk:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "FrontEnd-Client-TeleAtlantico-Support:serve:production"
+              "devServerTarget": "if4101-Client-Frontend-HelpDesk:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "FrontEnd-Client-TeleAtlantico-Support",
+  "defaultProject": "if4101-Client-Frontend-HelpDesk",
   "cli": {
     "analytics": "3a9e25d6-2cfd-42f4-89ac-b7c71fac794b"
   }
