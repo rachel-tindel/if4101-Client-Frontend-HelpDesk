@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  base_url: 'https://soporte-helpdesk20210721225722.azurewebsites.net/api'
+  base_url: 'https://teletlantico-client.azurewebsites.net/api'
   //base_url: 'http://localhost:8080/api'
 };
 
