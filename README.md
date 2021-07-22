@@ -1,5 +1,3 @@
-# if4101-Client-Frontend-HelpDesk
-
 ## Repositorio oficial de Teleatlantico (web-app) (Cliente)
 Este es el repositorio ofical de la aplicación web del Teleatlantico. Aquí se encuentra infomación importante sobre la instalación y las funciones de la aplicación. 
 
@@ -18,8 +16,13 @@ Presione [aquí](https://teleatlantico-soporte.vercel.app/login "Teleatlantico")
 ---
 
 **📌 Funciones:**
-*  
-*  
+*  Registrarse
+*  Iniciar a la aplicación
+*  Ingresar solicitud
+*  Ver lista de solicitudes
+*  Ver detalles de solicitud
+*  Ver perfil
+*  Salir de la aplicación
 <br>
 
 ---
